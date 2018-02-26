@@ -45,22 +45,33 @@ export default class ReactVRDemo2018_02 extends React.Component {
 		this.translateVal = {
 			translate: [0,0.25,-0.5]
 		};
-
 		this.styleObj = {
 			transform:[this.translateVal],
 			layoutOrigin:[0.5, 0.5]
 		};
+		// setting state: doDisplayMessage will show or hide message
+		this.setState({
+			doDisplayMessage: true
+		});
+		let intervalFn = () => {
+			let newState = { doDisplayMessage: !this.state.doDisplayMessage};
+			this.setState(newState);
+		};
+		setInterval(intervalFn, 1000);
+
 	}
+
+
 
 
   render() {
 
+	  let banner = this.state.doDisplayMessage === true ? '#DEV.TO' : '';
 
-
-  	let theView = <View>
+	  let theView = <View>
 		<Pano source={asset('reactvrmeetup_old.jpg')}></Pano>
 		<View style={this.styleObj}>
-			<SomeText text="DEV.TO 2018"/>
+			<SomeText text={banner}/>
 			<SomeText text="React VR Fun!"/>
 		</View>
 	</View>;
