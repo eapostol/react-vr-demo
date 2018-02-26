@@ -50,9 +50,9 @@ export default class ReactVRDemo2018_02 extends React.Component {
 			layoutOrigin:[0.5, 0.5]
 		};
 		// setting state: doDisplayMessage will show or hide message
-		this.setState({
+		this.state = {
 			doDisplayMessage: true
-		});
+		};
 		let intervalFn = () => {
 			let newState = { doDisplayMessage: !this.state.doDisplayMessage};
 			this.setState(newState);
@@ -66,8 +66,7 @@ export default class ReactVRDemo2018_02 extends React.Component {
 
   render() {
 
-	  let banner = this.state.doDisplayMessage === true ? '#DEV.TO' : '';
-
+	  let banner = this.state.doDisplayMessage === true ? '#DEV.TO' : "Edward!";
 	  let theView = <View>
 		<Pano source={asset('reactvrmeetup_old.jpg')}></Pano>
 		<View style={this.styleObj}>
