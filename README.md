@@ -14,4 +14,9 @@ Run `npm start` to initialize the development server
 From there, browse to http://localhost:8081/vr/
 Open `index.vr.js` to begin editing your app.
 
+You will see something like this, which you can play with...
+
+ ![Default ReactVR Screen](images/it_works.png)
+
+
 
