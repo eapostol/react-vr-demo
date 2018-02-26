@@ -16,7 +16,7 @@ View - generic VR component to wrap other components, i.e. text.
 
 export default class ReactVRDemo2018_02 extends React.Component {
   render() {
-	  let theView = <View><Pano source={asset('reactvrmeetup.jpg')}></Pano></View>;
+	  let theView = <View><Pano source={asset('reactvrmeetup_old.jpg')}></Pano></View>;
 	  return (theView);
   }
 };
