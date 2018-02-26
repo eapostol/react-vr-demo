@@ -1,33 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   AppRegistry,
   asset,
   Pano,
-  Text,
   View,
 } from 'react-vr';
 
+/*
+AppRegistry - tells ReactVr what is root of project
+asset - helper fn. - looks at static-assets
+Pano - controls scene of application
+View - generic VR component to wrap other components, i.e. text.
+ */
+// render - basic method in React JSX, returns the native equivalent elements
+
 export default class ReactVRDemo2018_02 extends React.Component {
   render() {
-    return (
-      <View>
-        <Pano source={asset('chess-world.jpg')}/>
-        <Text
-          style={{
-            backgroundColor: '#777879',
-            fontSize: 0.8,
-            fontWeight: '400',
-            layoutOrigin: [0.5, 0.5],
-            paddingLeft: 0.2,
-            paddingRight: 0.2,
-            textAlign: 'center',
-            textAlignVertical: 'center',
-            transform: [{translate: [0, 0, -3]}],
-          }}>
-          hello
-        </Text>
-      </View>
-    );
+	  let theView = <View><Pano source={asset('reactvrmeetup.jpg')}></Pano></View>;
+	  return (theView);
   }
 };
 

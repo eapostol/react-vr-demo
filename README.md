@@ -18,5 +18,14 @@ You will see something like this, which you can play with...
 
  ![Default ReactVR Screen](images/it_works.png)
 
+Example 02:
+
+- IMAGES_README.md is added to describe instructions about getting pano
+images from Samsung Gear
+- The Example 02 branch implements a simple panoramic image.
+- Note: Since Pano images are generally large, I would suggest not
+uploading the images to Github. (Github might not take your images
+anyway)
+
 
 
